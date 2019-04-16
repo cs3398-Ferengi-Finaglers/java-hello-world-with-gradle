@@ -62,4 +62,32 @@ public class TestGreeter {
 
    }
 
+   @Test
+
+   public void newtestAPGreederPass()
+
+   {
+
+      g.setName("Easter");
+
+      assertEquals(g.getName(),"Easter");
+
+      assertEquals(g.sayHello(),"Hello Easter!");
+
+   }
+
+   @Test
+
+   public void newtestAPGreederFail()
+
+   {
+
+      g.setName("Christmas");
+
+      assertEquals(g.getName(),"Graduation");
+
+      assertEquals(g.sayHello(),"Hello Graduation!");
+
+   }
+
 }
