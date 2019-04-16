@@ -76,18 +76,18 @@ public class TestGreeter {
 
    }
 
-   //@Test
+   @Test
 
-   //public void newtestAPGreederFail()
+   public void newtestAPGreederFail()
 
-   //{
+   {
 
-    //  g.setName("Christmas");
+      g.setName("Christmas");
 
-      //assertEquals(g.getName(),"Graduation");
+      assertEquals(g.getName(),"Graduation");
 
-     // assertEquals(g.sayHello(),"Hello Graduation!");
+      assertEquals(g.sayHello(),"Hello Graduation!");
 
-   //}
+   }
 
 }
