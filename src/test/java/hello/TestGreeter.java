@@ -99,11 +99,11 @@ public class TestGreeter {
    public void newtestKcpGreeterFail() 
 
    {
-       g.setName(123);
+       g.setName("123");
 
-      assertEquals(g.getName(),"123");
+      assertEquals(g.getName(),"Karen");
 
-      assertEquals(g.sayHello(),"Hello 123!");
+      assertEquals(g.sayHello(),"Hello World!");
 
    }
 }
