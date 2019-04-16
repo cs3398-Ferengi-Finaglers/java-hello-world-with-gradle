@@ -71,7 +71,7 @@ public class TestGreeter {
 
 	 assertEquals(g.getName(),"JunitTest");
 	 
-	 assertEquals(g.getName(),"Hello JunitTest");
+	 assertEquals(g.getName(),"Hello JunitTest!");
 	   
    }
 
