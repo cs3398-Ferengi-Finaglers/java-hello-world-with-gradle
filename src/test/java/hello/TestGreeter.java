@@ -61,5 +61,34 @@ public class TestGreeter {
       assertEquals(g.sayHello(),"Hello World!");
 
    }
+   
+   // Karen's added tests:
+   
+   // These two tests should pass
+   @Test
 
+   public void testGreeterKaren() 
+
+   {
+       g.setName("Karen");
+       g.setName("");
+       g.setName("Karen");
+      assertEquals(g.getName(),"Karen");
+
+      assertEquals(g.sayHello(),"Hello Karen!");
+
+   }
+   
+   @Test
+
+   public void newtestKcpGreeterPass() 
+
+   {
+       g.setName(Integer.toString(123));
+
+      assertEquals(g.getName(),"123");
+
+      assertEquals(g.sayHello(),"Hello 123!");
+
+   }
 }
