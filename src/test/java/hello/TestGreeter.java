@@ -74,5 +74,15 @@ public class TestGreeter {
 	 assertEquals(g.sayHello(),"Hello JunitTest!");
 	   
    }
+   
+      public void newtestJAPGreeterFail()
+   {
+	 g.setName("SadTime");
+
+	 assertEquals(g.getName(),"FunTime");
+	 
+	 assertEquals(g.sayHello(),"Hello FunTime!");
+	   
+   }
 
 }
