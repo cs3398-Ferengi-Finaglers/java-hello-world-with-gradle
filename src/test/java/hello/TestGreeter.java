@@ -64,7 +64,7 @@ public class TestGreeter {
     
     @Test
 
-   public void testGreetLehr() 
+   public void newtestjrsGreeterPass() 
 
    {
 
