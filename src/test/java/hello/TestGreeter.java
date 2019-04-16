@@ -75,19 +75,5 @@ public class TestGreeter {
       assertEquals(g.sayHello(),"Hello Dr.Lehr!");
 
    }
-    
-    @Test
-
-   public void newtestjrsGreeterFail() 
-
-   {
-
-      g.setName("Graders");
-
-      assertEquals(g.getName(),"Graders");
-
-      assertEquals(g.sayHello(),"Hello Grader!");
-
-   }
 
 }
