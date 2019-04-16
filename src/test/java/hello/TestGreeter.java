@@ -75,6 +75,7 @@ public class TestGreeter {
 	   
    }
    
+   @Test
       public void newtestJAPGreeterFail()
    {
 	 g.setName("SadTime");
