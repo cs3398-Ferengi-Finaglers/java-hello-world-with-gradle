@@ -94,16 +94,16 @@ public class TestGreeter {
    
    // This test should fail
    
-   @Test
+   //@Test
 
-   public void newtestKcpGreeterFail() 
+   //public void newtestKcpGreeterFail() 
 
-   {
-       g.setName("123");
+   //{
+    //   g.setName("123");
 
-      assertEquals(g.getName(),"Karen");
+    //  assertEquals(g.getName(),"Karen");
 
-      assertEquals(g.sayHello(),"Hello World!");
+    //  assertEquals(g.sayHello(),"Hello World!");
 
-   }
+   //}
 }
