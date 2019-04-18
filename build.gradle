@@ -60,6 +60,50 @@ dependencies {
 }
 // end::dependencies[]
 
+task dist {
+    description "Generate the dist(s) into the dist folder."
+}
+
+task distSetup {
+    description "Generate the dist folder."
+    delete "${projectDir}/dist"
+    copy {
+        from "${buildDir}/libs"
+        into "${projectDir}/dist/main"
+    }
+    copy {
+        from "${projectDir}/build/classes/test/Output"
+        into "${projectDir}/dist/test"
+    }
+}
+
+task zipDist(type: Zip, dependsOn: distSetup) {
+    from "${projectDir}/dist/main"
+    from "${projectDir}/Readme.md"
+    destinationDir = file("${projectDir}/dist")
+    version = "${version}"
+    appendix = "Main"
+    doLast {
+        println "Created ${zipDist.archiveName}"
+    }
+}
+
+task zipTest(type: Zip, dependsOn: distSetup) {
+    from "${projectDir}/dist/test"
+    from "${projectDir}/Readme.md"
+    destinationDir = file("${projectDir}/dist")
+    version = "${version}"
+    appendix = "Test Output"
+    doLast{
+        println "Created ${zipTest.archiveName}"
+    }
+}
+
+distSetup.dependsOn(build)
+
+dist.dependsOn(zipDist)
+dist.dependsOn(zipTest)
+
 // tag::wrapper[]
 task wrapper(type: Wrapper) {
     gradleVersion = '3.5'
