@@ -61,6 +61,19 @@ public class TestGreeter {
       assertEquals(g.sayHello(),"Hello World!");
 
    }
+    @Test
 
+   public void newTestLGDGreeterPass() 
+
+   {
+
+      g.setName("Pass");
+
+      assertEquals(g.getName(),"Pass");
+
+      assertEquals(g.sayHello(),"Hello Pass!");
+
+   }
+   
 
 }
