@@ -19,14 +19,14 @@ before_deploy:
   - git config --global user.name "Travis CI"
   - export GIT_TAG=$TRAVIS_BRANCH.$TRAVIS_BUILD_NUMBER
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git push -q https://$GITPERM@github.com/cs3398-Ferengi-Finaglers/  --tags
+  - git push -q https://$GITPERMD@github.com/cs3398-Ferengi-Finaglers/  --tags
   - ls -R
   
 deploy:
   skip_cleanup: true
   provider: releases
   api_key: 
-    secure: $GITPERM
+    secure: $GITPERMD
     
   file:
   - "README.md"
