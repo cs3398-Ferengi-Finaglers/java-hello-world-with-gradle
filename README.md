@@ -1,4 +1,4 @@
-# Building Java Project with Gradle
+# Building Java Project with Gradle test
 
 ##### This guide walks you through using Gradle to build a simple Java project.
 
