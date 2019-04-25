@@ -1,4 +1,3 @@
-// Travis CI distribution that will take gradle 4.10 and junit5
 dist: xenial
 
 language: java
