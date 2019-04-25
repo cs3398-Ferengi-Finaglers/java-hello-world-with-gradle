@@ -4,8 +4,7 @@ dist: xenial
 language: java
 script: 
   - gradle clean build
-  - tar -zcf TSP_test_reports.tar.gz build/reports
-  - tar -zcf TSP_executable_distributions.tar.gz build/distributions
+  - tar -zcf hello_world_build.tar.gz build
   - ls -R
 
 before_deploy:
@@ -15,7 +14,7 @@ before_deploy:
   - echo "Just generated GIT_TAG"
   - echo $GIT_TAG
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git push -q https://$GITPERM@github.com/cs3398-Ferengi-Finaglers/Java_Gradle_Hello_World  --tags
+  - git push -q https://$GITPERM@github.com/drlehr/Java_Gradle_Hello_World  --tags
   - ls -R
   
 deploy:
@@ -23,9 +22,8 @@ deploy:
   api_key:
     secure: $GITPERM
   file: 
-    - README.md
-    - TSP_test_reports.tar.gz 
-    - TSP_executable_distributions.tar.gz 
+    - "README.md"
+    -  hello_world_build.tar.gz 
   skip_cleanup: true
   on:
     tags: false
