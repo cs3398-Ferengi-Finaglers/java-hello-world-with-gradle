@@ -10,6 +10,8 @@ apply plugin: 'application'
 
 mainClassName = 'hello.HelloWorld'
 
+ignoreExitValue = true
+
 repositories {
     mavenCentral()
 }
