@@ -1,7 +1,11 @@
+// Travis CI distribution that will take gradle 4.10 and junit5
+dist: xenial
+
 language: java
 script: 
   - gradle clean build
-  - tar -zcf hello_world_build.tar.gz build
+  - tar -zcf TSP_test_reports.tar.gz build/reports
+  - tar -zcf TSP_executable_distributions.tar.gz build/distributions
   - ls -R
 
 before_deploy:
@@ -11,7 +15,7 @@ before_deploy:
   - echo "Just generated GIT_TAG"
   - echo $GIT_TAG
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git push -q https://$GITPERM@github.com/cs3398-Ferengi-Finaglers/java-hello-world-with-gradle  --tags
+  - git push -q https://$GITPERM@github.com/cs3398-Ferengi-Finaglers/Java_Gradle_Hello_World  --tags
   - ls -R
   
 deploy:
@@ -19,8 +23,10 @@ deploy:
   api_key:
     secure: $GITPERM
   file: 
-    - "README.md"
-    -  hello_world_build.tar.gz 
+    - README.md
+    - TSP_test_reports.tar.gz 
+    - TSP_executable_distributions.tar.gz 
   skip_cleanup: true
   on:
     tags: false
+  
