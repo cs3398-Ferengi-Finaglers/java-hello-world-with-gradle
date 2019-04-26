@@ -1,6 +1,7 @@
 language: java
-dist: xenial
 jdk: oraclejdk8
+dist: xenial
+
 script: 
   - gradle clean build
   - tar -zcf hello_world_build.tar.gz build
