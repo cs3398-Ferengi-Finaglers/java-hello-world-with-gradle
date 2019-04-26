@@ -41,6 +41,10 @@ test {
     }
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
+}
+
 task dist {
     description "Generate the dist(s) into the dist folder need to fix this."
 }
