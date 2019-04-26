@@ -1,4 +1,6 @@
 language: java
+dist: xenial
+
 script: 
   - gradle clean build
   - tar -zcf hello_world_build.tar.gz build
